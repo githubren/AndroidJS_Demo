@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>安卓与js交互</title>
+
+    <script>
+
+		function callJS(){
+			alert("安卓调用JS中的callJs方法");
+			return "js返回的数据";
+		}
+
+		function callAndroid1(){
+		    android.test("js调用了安卓的test方法");
+		}
+
+		function callAndroid2(){
+		    document.location="js://webview?name=张三&age=24";
+		}
+
+		function callAndroid3(){
+		    var result=prompt("js://android?name=李四&age=24");
+		    alert(result);
+		}
+
+    </script>
+</head>
+
+
+<body>
+<p>这是一个文本</p>
+
+<button type="button" id="btn1" onclick="callAndroid1()">点击调用安卓的方法1</button>
+<button type="button" id="btn2" onclick="callAndroid2()">点击调用安卓的方法2</button>
+<button type="button" id="btn3" onclick="callAndroid3()">点击调用安卓的方法3</button>
+</body>
+</html>
