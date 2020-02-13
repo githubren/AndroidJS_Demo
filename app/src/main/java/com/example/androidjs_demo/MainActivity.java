@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void getMethodByEvaluateJavascript() {
-        mWebView.evaluateJavascript("javascript:callJS()", new ValueCallback<String>() {
+        mWebView.evaluateJavascript("javascript:callJS2()", new ValueCallback<String>() {
             @Override
             public void onReceiveValue(String value) {
                 //js返回值处理
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void run() {
                 //这种方法调用js的方法没有返回值
-                mWebView.loadUrl("javascript:callJS()");
+                mWebView.loadUrl("javascript:callJS1()");
             }
         });
     }
